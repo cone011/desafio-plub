@@ -18,7 +18,7 @@ Va a inicializar y correr los dos contenedores de MongoDB y nodeJS
 
 ## Coleccion Postman
 
-**La coleccion de postman se encuentra dentro de la carpeta se llama coleccion  coleccion Postman/Desafio Plub.postman_collection.json**
+**La coleccion de postman se encuentra dentro de la carpeta se llama coleccion Postman y el arcivho Desafio Plub.postman_collection.json**
 
 **La app va a correr en el http://localhost:9090**
 
