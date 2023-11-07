@@ -1,0 +1,751 @@
+{
+	"info": {
+		"_postman_id": "cc8c243e-e08b-4650-bd1c-15c0154a1b38",
+		"name": "Desafio Plub",
+		"description": "En este archivo dejo una coleccion de llamados para realizar la llamada a la api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10192055"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"testing4@gmail.com\",\r\n  \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"testing44@gmail.com\",\r\n  \"password\":\"12345\",\r\n  \"confirmPassword\":\"12345\",\r\n  \"name\":\"Juan caimen\",\r\n  \"phone\": \"+595971320425\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users?perPage=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/users/654944b7698dfdc9e0975590",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"654944b7698dfdc9e0975590"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"testing@gmail.com\",\r\n  \"name\":\"Juan caimen 1234\",\r\n  \"phone\": \"+595971320425\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/users/65494700c31254f9eb06c789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"users",
+								"65494700c31254f9eb06c789"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\":\"1234566\",\r\n  \"confirmPassword\":\"1234566\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/reset/6549484ac31254f9eb06c794",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"reset",
+								"6549484ac31254f9eb06c794"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/user/6549484ac31254f9eb06c794",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"user",
+								"6549484ac31254f9eb06c794"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Las llamadas que realiza el schema users"
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "getAllClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RpbmdAZ21haWwuY29tIiwidXNlcklkIjoiNjU0OGRkZjJlODNiMjFiYTAyOWYwYWUxIiwiaWF0IjoxNjk5MzAzODU0LCJleHAiOjE2OTkzMDQ3NTR9.Q-saR-6ZeaKEGd3iTXEOwp26yfvOjS5qNVHSHTJYvso",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/client?perPage=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"client"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Testing\",\r\n  \"email\": \"jjcaimen1456@gmail.com\",\r\n  \"phone\": \"+595971320425\",\r\n  \"addres\": \"testing addres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClientById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/client/65494928c31254f9eb06c7a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"client",
+								"65494928c31254f9eb06c7a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSearchClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMDkzMCwiZXhwIjoxNjk5MzAxODMwfQ.Pj6Z3TlM7v3pf3XCy097ZN8f7XqkaVe3DSFT2CBvVhI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/search/client?clientSearch=Jua&perPage=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"search",
+								"client"
+							],
+							"query": [
+								{
+									"key": "clientSearch",
+									"value": "Jua"
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jose Cespedes\",\r\n  \"email\": \"jjcaimen1@gmail.com\",\r\n  \"phone\": \"+59521680820\",\r\n  \"addres\": \"testing addres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/client/65494928c31254f9eb06c7a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"client",
+								"65494928c31254f9eb06c7a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/client/65494ab0c31254f9eb06c7b0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"client",
+								"65494ab0c31254f9eb06c7b0"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Llamada de la api al schema cliente"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "insertProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"title testing delete\",\r\n  \"price\":\"1500\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/product?perPage=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/product/65494b71c31254f9eb06c7b4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"product",
+								"65494b71c31254f9eb06c7b4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSearchProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwNDQ2MSwiZXhwIjoxNjk5MzA1MzYxfQ.flpjWSDpZhorW8B7w35AkfQwnTnmyHM6RQYpgtQ0K1w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/search/product?productSearch=title&perPage=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"search",
+								"product"
+							],
+							"query": [
+								{
+									"key": "productSearch",
+									"value": "title"
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\":\"title testing 4\",\r\n  \"price\":\"5600\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/product/65494b7fc31254f9eb06c7b8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"product",
+								"65494b7fc31254f9eb06c7b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rpbmc0QGdtYWlsLmNvbSIsInVzZXJJZCI6IjY1NDk0NGI3Njk4ZGZkYzllMDk3NTU5MCIsImlhdCI6MTY5OTMwMTk2OCwiZXhwIjoxNjk5MzAyODY4fQ.mq4vAZ6XctrXPfaZ0Bie_aTdm8vpWrFU4SbEoLrNbFU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/product/65494c46c31254f9eb06c7c1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"product",
+								"65494c46c31254f9eb06c7c1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Llamada a la schema Product"
+		}
+	]
+}
